@@ -1,6 +1,7 @@
 import javax.swing.JOptionPane;
 public class Ejercicio10 {
     public static void main(String[] args) {
+
         int n = Integer.parseInt(JOptionPane.showInputDialog("Cantidad de términos"));
 
         int a = 0;
