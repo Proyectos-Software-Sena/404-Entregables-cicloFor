@@ -17,5 +17,6 @@ public class Ejercicio3 {
         JOptionPane.showMessageDialog(null,
                 "La temperatura máxima registrada fue: " + mayor + " °C");
 
+
     }
 }
