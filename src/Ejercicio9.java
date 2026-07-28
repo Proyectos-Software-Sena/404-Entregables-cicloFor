@@ -1,6 +1,7 @@
 import javax.swing.JOptionPane;
 public class Ejercicio9 {
     public static void main (String[] args) {
+
         int bacterias = Integer.parseInt(JOptionPane.showInputDialog("Cantidad inicial de bacterias"));
 
         int horas = Integer.parseInt(JOptionPane.showInputDialog("Cantidad de horas"));
