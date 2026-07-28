@@ -1,6 +1,7 @@
 import javax.swing.JOptionPane;
 public class Ejercicio7 {
     public static void main(String[] args) {
+
         double tasa = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la TRM"));
 
         String tabla = "";
