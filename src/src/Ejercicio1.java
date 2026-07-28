@@ -6,7 +6,7 @@ public class Ejercicio1 {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Bienvenido");
+        System.out.println("Bienvenido grupo");
 
         System.out.println("Digite la cantidad de ventas del día:");
         int cantidad_ventas = sc.nextInt();
