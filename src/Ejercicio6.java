@@ -6,6 +6,7 @@ public class Ejercicio6 {
         int menores = 0;
         int adultos = 0;
 
+
         for (int i = 1; i <= asistentes; i++) {
 
             int edad = Integer.parseInt(JOptionPane.showInputDialog("Edad del asistente " + i));
