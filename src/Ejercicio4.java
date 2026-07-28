@@ -15,6 +15,7 @@ public class Ejercicio4 {
 
         double promedio = suma / cantidad;
 
+
         if (promedio >= 3.0) {
             JOptionPane.showMessageDialog(null,
                     "Promedio: " + promedio + "\nEstado: Aprobado");
