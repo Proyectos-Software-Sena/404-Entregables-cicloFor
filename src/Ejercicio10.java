@@ -1,7 +1,8 @@
+import java.util.Scanner;
 public class Ejercicio10 {
     public static void main(String[] args) {
         //Ingrese su código
-        Scanner leer = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
         System.out.println("Cantidad de terminos:");
         int n = sc.nextInt();
