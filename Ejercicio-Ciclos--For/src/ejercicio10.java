@@ -1,45 +1,26 @@
-import javax.swing.JOptionPane;
+import java.util.Scanner;
 
 public class ejercicio10 {
-
     public static void main(String[] args) {
 
-        // Pedir la cantidad de términos
-        int cantidadTerminos = Integer.parseInt(
-                JOptionPane.showInputDialog(
-                        "Ingrese la cantidad de términos de Fibonacci:"
-                )
-        );
+        Scanner sc = new Scanner(System.in);
 
-        // Primeros dos valores de Fibonacci
-        long anterior = 0;
-        long actual = 1;
+        int n;
 
-        // Variable para almacenar la serie
-        String resultado = "";
+        System.out.print("Cantidad de términos: ");
+        n = sc.nextInt();
 
-        // Un solo ciclo for para generar Fibonacci
-        for (int i = 1; i <= cantidadTerminos; i++) {
+        int a = 0;
+        int b = 1;
+        int siguiente;
 
-            // Agregar el número actual al resultado
-            resultado += anterior;
+        for (int i = 1; i <= n; i++) {
 
-            // Agregar coma si no es el último término
-            if (i < cantidadTerminos) {
-                resultado += ", ";
-            }
+            System.out.print(a + " ");
 
-            // Calcular el siguiente número
-            long siguiente = anterior + actual;
-
-            anterior = actual;
-            actual = siguiente;
+            siguiente = a + b;
+            a = b;
+            b = siguiente;
         }
-
-        // Mostrar la sucesión
-        JOptionPane.showMessageDialog(
-                null,
-                "Sucesión de Fibonacci:\n" + resultado
-        );
     }
 }

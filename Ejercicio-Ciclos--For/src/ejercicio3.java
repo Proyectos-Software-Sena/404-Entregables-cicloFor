@@ -1,39 +1,27 @@
-import javax.swing.JOptionPane;
+import java.util.Scanner;
 
 public class ejercicio3 {
-
     public static void main(String[] args) {
 
-        // Pedir la cantidad de lecturas de temperatura
-        int cantidadLecturas = Integer.parseInt(
-                JOptionPane.showInputDialog(
-                        "Ingrese la cantidad de lecturas de temperatura:"
-                )
-        );
+        Scanner sc = new Scanner(System.in);
 
-        // Variable para almacenar la temperatura máxima
-        double temperaturaMaxima = Double.NEGATIVE_INFINITY;
+        int cantidad;
+        int temperatura;
+        int maxima = Integer.MIN_VALUE;
 
-        // Ciclo for para ingresar las temperaturas
-        for (int i = 1; i <= cantidadLecturas; i++) {
+        System.out.print("Cantidad de lecturas: ");
+        cantidad = sc.nextInt();
 
-            double temperatura = Double.parseDouble(
-                    JOptionPane.showInputDialog(
-                            "Ingrese la temperatura " + i + " en °C:"
-                    )
-            );
+        for (int i = 1; i <= cantidad; i++) {
 
-            // Comparar la temperatura actual con la máxima registrada
-            if (temperatura > temperaturaMaxima) {
-                temperaturaMaxima = temperatura;
+            System.out.print("Temperatura " + i + ": ");
+            temperatura = sc.nextInt();
+
+            if (temperatura > maxima) {
+                maxima = temperatura;
             }
         }
 
-        // Mostrar únicamente la temperatura más alta
-        JOptionPane.showMessageDialog(
-                null,
-                "La temperatura máxima registrada fue: "
-                        + temperaturaMaxima + "°C"
-        );
+        System.out.println("La temperatura máxima registrada fue: " + maxima + "°C");
     }
 }

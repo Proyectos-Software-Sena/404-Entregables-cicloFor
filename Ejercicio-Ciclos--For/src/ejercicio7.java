@@ -1,31 +1,18 @@
-import javax.swing.JOptionPane;
+import java.util.Scanner;
 
 public class ejercicio7 {
-
     public static void main(String[] args) {
 
-        // Pedir la tasa de cambio
-        double tasaCambio = Double.parseDouble(
-                JOptionPane.showInputDialog(
-                        "Ingrese la tasa de cambio USD a COP:"
-                )
-        );
+        Scanner sc = new Scanner(System.in);
 
-        // Variable para almacenar la tabla
-        String resultado = "Tabla de conversión:\n\n";
+        double trm;
 
-        // Generar la tabla del 1 al 10 USD
-        for (int dolar = 1; dolar <= 10; dolar++) {
+        System.out.print("Ingrese la TRM: ");
+        trm = sc.nextDouble();
 
-            double pesos = dolar * tasaCambio;
+        for (int i = 1; i <= 10; i++) {
 
-            resultado += dolar + " USD = " + pesos + " COP\n";
+            System.out.println(i + " USD = " + (i * trm) + " COP");
         }
-
-        // Mostrar la tabla
-        JOptionPane.showMessageDialog(
-                null,
-                resultado
-        );
     }
 }

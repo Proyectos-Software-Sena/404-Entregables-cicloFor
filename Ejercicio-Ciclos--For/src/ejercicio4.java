@@ -1,48 +1,33 @@
-import javax.swing.JOptionPane;
+import java.util.Scanner;
 
 public class ejercicio4 {
-
     public static void main(String[] args) {
 
-        // Pedir la cantidad de calificaciones
-        int cantidadNotas = Integer.parseInt(
-                JOptionPane.showInputDialog(
-                        "Ingrese la cantidad de calificaciones:"
-                )
-        );
+        Scanner sc = new Scanner(System.in);
 
-        // Variable para acumular las notas
-        double sumaNotas = 0;
+        int cantidad;
+        double nota;
+        double suma = 0;
 
-        // Ciclo para ingresar las calificaciones
-        for (int i = 1; i <= cantidadNotas; i++) {
+        System.out.print("Cantidad de calificaciones: ");
+        cantidad = sc.nextInt();
 
-            double nota = Double.parseDouble(
-                    JOptionPane.showInputDialog(
-                            "Ingrese la calificación " + i + " (0.0 a 5.0):"
-                    )
-            );
+        for (int i = 1; i <= cantidad; i++) {
 
-            sumaNotas += nota;
+            System.out.print("Nota " + i + ": ");
+            nota = sc.nextDouble();
+
+            suma += nota;
         }
 
-        // Calcular el promedio
-        double promedio = sumaNotas / cantidadNotas;
+        double promedio = suma / cantidad;
 
-        // Verificar si aprobó
-        String estado;
+        System.out.println("Promedio: " + promedio);
 
         if (promedio >= 3.0) {
-            estado = "Aprobado";
+            System.out.println("Estado: Aprobado");
         } else {
-            estado = "No Aprobado";
+            System.out.println("Estado: No Aprobado");
         }
-
-        // Mostrar el resultado
-        JOptionPane.showMessageDialog(
-                null,
-                "Promedio: " + promedio +
-                        "\nEstado: " + estado
-        );
     }
 }

@@ -1,40 +1,24 @@
-import javax.swing.JOptionPane;
+import java.util.Scanner;
 
 public class ejercicio9 {
-
     public static void main(String[] args) {
 
-        // Pedir la cantidad inicial de bacterias
-        long bacterias = Long.parseLong(
-                JOptionPane.showInputDialog(
-                        "Ingrese la cantidad inicial de bacterias:"
-                )
-        );
+        Scanner sc = new Scanner(System.in);
 
-        // Pedir la cantidad de horas
-        int horas = Integer.parseInt(
-                JOptionPane.showInputDialog(
-                        "Ingrese la cantidad de horas de proyección:"
-                )
-        );
+        int bacterias;
+        int horas;
 
-        // Variable para almacenar el resultado
-        String resultado = "Crecimiento bacteriano:\n\n";
+        System.out.print("Cantidad inicial de bacterias: ");
+        bacterias = sc.nextInt();
 
-        // Ciclo para calcular el crecimiento por cada hora
-        for (int hora = 1; hora <= horas; hora++) {
+        System.out.print("Horas de proyección: ");
+        horas = sc.nextInt();
 
-            // Las bacterias se duplican cada hora
-            bacterias = bacterias * 2;
+        for (int i = 1; i <= horas; i++) {
 
-            resultado += "Hora " + hora + ": "
-                    + bacterias + " bacterias\n";
+            bacterias *= 2;
+
+            System.out.println("Hora " + i + ": " + bacterias + " bacterias");
         }
-
-        // Mostrar el resultado
-        JOptionPane.showMessageDialog(
-                null,
-                resultado
-        );
     }
 }

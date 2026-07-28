@@ -1,31 +1,23 @@
-import javax.swing.JOptionPane;
+import java.util.Scanner;
 
 public class ejercicio6 {
-
     public static void main(String[] args) {
 
-        // Pedir la cantidad de asistentes
-        int cantidadAsistentes = Integer.parseInt(
-                JOptionPane.showInputDialog(
-                        "Ingrese la cantidad total de asistentes:"
-                )
-        );
+        Scanner sc = new Scanner(System.in);
 
-        // Contadores de menores y adultos
+        int asistentes;
+        int edad;
         int menores = 0;
         int adultos = 0;
 
-        // Ciclo for para registrar las edades
-        for (int i = 1; i <= cantidadAsistentes; i++) {
+        System.out.print("Cantidad de asistentes: ");
+        asistentes = sc.nextInt();
 
-            // Pedir la edad del asistente
-            int edad = Integer.parseInt(
-                    JOptionPane.showInputDialog(
-                            "Ingrese la edad del asistente " + i + ":"
-                    )
-            );
+        for (int i = 1; i <= asistentes; i++) {
 
-            // Clasificar según la edad
+            System.out.print("Edad del asistente " + i + ": ");
+            edad = sc.nextInt();
+
             if (edad < 18) {
                 menores++;
             } else {
@@ -33,11 +25,7 @@ public class ejercicio6 {
             }
         }
 
-        // Mostrar los resultados
-        JOptionPane.showMessageDialog(
-                null,
-                "Menores de edad: " + menores
-                        + "\nAdultos: " + adultos
-        );
+        System.out.println("Menores: " + menores);
+        System.out.println("Adultos: " + adultos);
     }
 }

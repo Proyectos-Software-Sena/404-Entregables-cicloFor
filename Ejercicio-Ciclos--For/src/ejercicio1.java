@@ -1,36 +1,23 @@
-import javax.swing.JOptionPane;
+import java.util.Scanner;
 
 public class ejercicio1 {
-
     public static void main(String[] args) {
 
-        // Pedir la cantidad de ventas realizadas
-        int cantidadVentas = Integer.parseInt(
-                JOptionPane.showInputDialog(
-                        "Ingrese la cantidad de ventas realizadas:"
-                )
-        );
+        Scanner sc = new Scanner(System.in);
 
-        // Variable para almacenar el total
-        double totalVentas = 0;
+        int cantidadVentas;
+        int venta;
+        int total = 0;
 
-        // Ciclo for para ingresar cada venta
+        System.out.print("¿Cuántas ventas se realizaron?: ");
+        cantidadVentas = sc.nextInt();
+
         for (int i = 1; i <= cantidadVentas; i++) {
-
-            double venta = Double.parseDouble(
-                    JOptionPane.showInputDialog(
-                            "Ingrese el valor de la venta " + i + ":"
-                    )
-            );
-
-            // Sumar la venta al total
-            totalVentas += venta;
+            System.out.print("Valor de la venta " + i + ": ");
+            venta = sc.nextInt();
+            total += venta;
         }
 
-        // Mostrar el resultado final
-        JOptionPane.showMessageDialog(
-                null,
-                "El total de ventas del día es: $" + totalVentas
-        );
+        System.out.println("El total de ventas del día es: $" + total);
     }
 }
