@@ -1,7 +1,17 @@
 import java.util.Scanner;
 
 public class Ejercicio8 {
-    public static void main (String[] args) {
-        //Ingrese su código
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingrese la palabra clave: ");
+        String palabra = sc.nextLine();
+        String invertida = "";
+
+        for (int i = palabra.length() - 1; i >= 0; i--) {
+            invertida += palabra.charAt(i);
+        }
+
+        System.out.println("Cadena invertida: " + invertida);
     }
 }
+
