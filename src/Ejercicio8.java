@@ -2,6 +2,7 @@ import javax.swing.JOptionPane;
 
 public class Ejercicio8 {
     public static void main (String[] args) {
+
         String palabra = JOptionPane.showInputDialog("Ingrese una palabra");
 
         String invertida = "";
