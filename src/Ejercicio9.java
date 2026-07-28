@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Ejercicio9 {
     public static void main (String[] args) {
         //Ingrese su código
+
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Cantidad inicial de bacterias:");
