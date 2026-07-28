@@ -12,7 +12,7 @@ public class Ejercicio2 {
         for (int i = 1; i <= numeropiezas; i++) {
             pesogramos = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el peso de la pieza " +i));
 
-            if (pesogramos >= 100 && pesogramos <= 120) {
+            if (pesogramos >= 100 && pesogramos <= 121) {
                 buneas++;
             } else {
                 defecto++;
