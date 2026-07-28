@@ -2,6 +2,7 @@ import java.util.Scanner;
 public class Ejercicio10 {
     public static void main(String[] args) {
         //Ingrese su código
+
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Cantidad de terminos:");
