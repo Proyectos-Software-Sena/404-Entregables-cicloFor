@@ -3,16 +3,12 @@ import javax.swing.*;
 public class Ejercicio6 {
     public static void main(String[] args) {
 
-        int cantidadAsistentes;
+        int cantidadAsistentes = Integer.parseInt(
+                JOptionPane.showInputDialog("¿Cuántos asistentes hay?"));
         int edad;
         int menores = 0;
         int adultos = 0;
 
-        cantidadAsistentes = Integer.parseInt(
-                JOptionPane.showInputDialog(
-                        "¿Cuántos asistentes hay?"
-                )
-        );
 
         for (int i = 1; i <= cantidadAsistentes; i++) {
 
