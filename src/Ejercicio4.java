@@ -4,14 +4,13 @@ public class Ejercicio4 {
     public  static void main(String args[]){
 
         int cantidadNotas=Integer.parseInt(JOptionPane.showInputDialog("¿Cuántas calificaciones tiene el módulo?"));
-        double nota;
         double sumaNotas = 0;
         double promedio;
 
 
         for (int i = 1; i <= cantidadNotas; i++) {
 
-            nota = Double.parseDouble(
+            double nota = Double.parseDouble(
                     JOptionPane.showInputDialog(
                             "Ingrese la nota " + i
                     )
