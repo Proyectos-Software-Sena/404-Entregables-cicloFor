@@ -6,6 +6,7 @@ public class Ejercicio1 {
         int cantidadVentas= Integer.parseInt(JOptionPane.showInputDialog("¿Cuántas ventas se realizaron hoy?"));
         int total = 0;
 
+
         for (int i = 1;i <= cantidadVentas; i++) {
             int valorVenta = Integer.parseInt(
                     JOptionPane.showInputDialog("Ingrese el valor de la venta " + i));
