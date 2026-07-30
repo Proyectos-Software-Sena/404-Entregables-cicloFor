@@ -1,6 +1,6 @@
 import javax.swing.*;
 
-public class ejercicio_5 {
+public class Ejercicio5 {
 
     public static void main(String[] args) {
 
@@ -28,5 +28,5 @@ public class ejercicio_5 {
         }
     }
 }
-    }
-}
+
+
